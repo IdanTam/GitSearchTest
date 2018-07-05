@@ -1,0 +1,9 @@
+
+<div class="card">
+  <img class="card-img-top" src="{{data.avatar}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{data.name}}</h5>
+    <p class="card-text">Owner: {{data.owner}}</p>
+    <button *ngIf="isDisplayButton" (click)="setBookmark()" class="btn btn-primary">Bookmark</button>
+  </div>
+</div>

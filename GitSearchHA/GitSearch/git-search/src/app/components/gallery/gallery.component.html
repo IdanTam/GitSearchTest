@@ -1,0 +1,26 @@
+
+
+<div class="container" style="margin-top:30px">
+  <div class="container-fluid bg-3 text-center padbottom">
+    <div class="row">
+      <div class="col-sm-7">
+        <input autofocus   [disabled]="isSearching" type="text" class="form-control" [(ngModel)]="query" placeholder="Enter repository name" (keydown)="keyDownFunction($event)">
+      </div>
+      <div class="col-sm-3">
+        <button [disabled]="isSearching" type="button" class="btn btn-primary form-control" (click)="search()">
+          <i *ngIf="isSearching" class="fa fa-refresh fa-spin">search</i><span *ngIf="!isSearching">Search</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="margin-top: 30px">
+  <div *ngIf="isNoResultsDisplay" class="row">No Results where found...</div>
+  <div class="row card-group">
+
+    <div class="col-sm-4" style="padding-bottom: 20px" *ngFor="let item of searchResults">
+      <app-repository [data]="item"></app-repository>
+    </div>
+  </div>
+</div>
