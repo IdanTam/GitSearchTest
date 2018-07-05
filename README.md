@@ -1,5 +1,5 @@
 
-# Intruction in order to run the app
+# Instructions in order to run the app
 
 #Client Side
 In order to build the client side:
@@ -11,7 +11,7 @@ In order to build the client side:
 #Server Side
 To run the client and the server:
 1. open the solution in visual studio 2017
-2. click F5 (start debugging)
+2. click F5 (start debugging - might need to configure /git-search/dist/index.html as start page)
 
 
 
@@ -30,3 +30,5 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 # Server Side
 ASP.NET Web Api
+
+In order to share the asp.net sessiom both client and server are on the same project in order to share the same application pool.
